@@ -62,4 +62,5 @@ Le bouton "Share" est relié à la fonction Share() qui se trouve dans le fichie
 ------------Partie 1.2-----------
 
 Création d'un composant enfant "ProductAlertsComponent" qui peut recrvoir les données de son composant parent "ProductListComponent".
+hello
 
