@@ -1,4 +1,4 @@
-<<<<<<<<<<<PARTIE 1 :Initiation>>>>>>>>>>>
+# <<<<<<<<<<<PARTIE 1 :Initiation>>>>>>>>>>>
 
 
 
@@ -10,11 +10,11 @@ Composant racine qui sera le parent de tous les composants.
 
 
 Un composant est définit par 3 fichiers.
-     ```ts
+    
      Composant.component.css
      Composant.component.html // Définit la structure et la présentation du composant.
      Composant.composant.ts
-     ```
+   
 
 Pour créer un composant :
 Dans la console "ng generate component nomDuComposant".
@@ -23,12 +23,12 @@ Le fichier app.module.ts est la structure centralisée pour définir les composa
 Dans ce fichier on déclate les composants dans la section "déclarations".
 On fait l'import des modules externes.
 
-///////J'ai pas bien compris à quoi sert le "RouterModule".
+### ///////J'ai pas bien compris à quoi sert le "RouterModule".
 
 
 
 
-------------Partie 1.1-----------
+## ------------Partie 1.1-----------
 
 
 . Dans l'exemple, il y a 3 composants :
@@ -42,7 +42,7 @@ On fait l'import des modules externes.
 
 Dans le fichier html du composant "product-list":
 
-On utilise la directive structurelle "*ngFor" qui permet de faire une boucle sur une liste d'éléments. Dans cet exemple, elle itère sur la liste de produits et affiche chaque produit dans une balise <li>
+On utilise la directive structurelle "*ngFor" qui permet de faire une boucle sur une liste d'éléments. Dans cet exemple, elle itère sur la liste de produits et affiche chaque produit dans une balise.
 
 
 {{}} : syntaxe d'interpolation, permet d'insérer des valeurs de propriété de composant dans le template.
@@ -59,8 +59,27 @@ Le bouton "Share" est relié à la fonction Share() qui se trouve dans le fichie
 
 
 
-------------Partie 1.2-----------
+## ------------Partie 1.2-----------
 
-Création d'un composant enfant "ProductAlertsComponent" qui peut recrvoir les données de son composant parent "ProductListComponent".
-hello
+Création d'un composant enfant "ProductAlertsComponent" qui peut recevoir les données de son composant parent "ProductListComponent".
+Automatiquement un décorateur s'est créé dans la page html du composant. Le décorateur fournit des données.
+Le selector qui identifie le composant par convention il commence toujours par app., le template et le style.
+Un décorateur permet de changer les méthodes, les propriétés, les fonctionnalités de base...
+
+### /////// c'est encore un peu flou pour moi l'utilisation des décorateurs.
+
+
+-Transmettre des données entre composants-
+@Input(): décorateur Angular qui indique que la propriété annotée est une proprité d'entrée du composant. Cette propriété peut être assignée ou passée au composant depuis son composant parent. Cette fonctionnalité permet une communication entre les composants, où le composant parent peut transmettre des données au composant enfant en utilisant cette propriété d'entrée.
+
+@Ouput(): décorateur utilisé pour définir une propriété de sortie d'un composant. Elle peut émettre des évènements personnalisés que d'autres composants peuvent écouter.
+
+Dans le fichier product-list.component.html(composant parent):
+<app-product-alerts
+  [product]="product">
+</app-product-alerts>
+me permet de créer une instance du composant dans le template du composant parent.
+La liaison de propriété me permet de transmettre la valeur de la propriété du composant parent au composant enfant.
+
+(notify)="onNotify()" : Liaison d'évènement pour écouter un évènement émis par un composant parent.
 
