@@ -38,7 +38,7 @@ On fait l'import des modules externes.
 
 . Un fichier product.ts qui contient la liste des produits avec le détail. (pour simuler les données API)
 
-
+ 
 
 Dans le fichier html du composant "product-list":
 
