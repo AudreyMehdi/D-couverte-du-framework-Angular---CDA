@@ -5,7 +5,7 @@
 ------------INTRO-----------
 
 Le point d'entrée de l'application reste le fichier "index.html" (ce qui va être affiché à l'écran).
-Par défault quand on utilise Angular, dans le fichier index.html il y a la balise <app-root>"ici s'affichera toute la page Angular"</app-root>
+Par défault quand on utilise Angular, dans le fichier index.html il y a la balise ```<app-root>"ici s'affichera toute la page Angular"</app-root>``
 Composant racine qui sera le parent de tous les composants.
 
 
@@ -20,7 +20,7 @@ Pour créer un composant :
 Dans la console "ng generate component nomDuComposant".
 
 Le fichier app.module.ts est la structure centralisée pour définir les composants, modules et services.
-Dans ce fichier on déclate les composants dans la section "déclarations".
+Dans ce fichier on déclare les composants dans la section "déclarations".
 On fait l'import des modules externes.
 
 ### ///////J'ai pas bien compris à quoi sert le "RouterModule".
@@ -70,14 +70,17 @@ Un décorateur permet de changer les méthodes, les propriétés, les fonctionna
 
 
 -Transmettre des données entre composants-
+
 @Input(): décorateur Angular qui indique que la propriété annotée est une proprité d'entrée du composant. Cette propriété peut être assignée ou passée au composant depuis son composant parent. Cette fonctionnalité permet une communication entre les composants, où le composant parent peut transmettre des données au composant enfant en utilisant cette propriété d'entrée.
 
 @Ouput(): décorateur utilisé pour définir une propriété de sortie d'un composant. Elle peut émettre des évènements personnalisés que d'autres composants peuvent écouter.
 
 Dans le fichier product-list.component.html(composant parent):
+```
 <app-product-alerts
   [product]="product">
 </app-product-alerts>
+```
 me permet de créer une instance du composant dans le template du composant parent.
 La liaison de propriété me permet de transmettre la valeur de la propriété du composant parent au composant enfant.
 
