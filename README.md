@@ -6,10 +6,11 @@
 
 
 . Dans l'exemple, il y a 3 composants :
-     * app.component
-     * app.top-bar.component (enfant de app.component)
-     * app.product-list.component (enfant de app.component)
-
+```ts
+     - app.component
+     - app.top-bar.component (enfant de app.component)
+     - app.product-list.component (enfant de app.component)
+```
 . Un fichier product.ts qui contient la liste des produits avec le détail. (pour simuler les données API)
 
  
@@ -119,7 +120,7 @@ Pour créer un imput :
 
 
 
-# <<<<<<<<<<<Mes Observations>>>>>>>>>>>
+# <<<<<<<<<<<Mes observations>>>>>>>>>>>
 
 Le point d'entrée de l'application reste le fichier "index.html" (ce qui va être affiché à l'écran).
 Par défault quand on utilise Angular, dans le fichier index.html il y a la balise 
@@ -142,7 +143,7 @@ Le fichier app.module.ts est la structure centralisée pour définir les composa
 Dans ce fichier on déclare les composants dans la section "déclarations".
 On fait l'import des modules externes.
 Un projet Angular est composé de plusieurs composants qui intéragissent entre eux.
-La méthode onInit me permet de changer de page et donc de composant.
+La méthode onInit() me permet de changer de page et donc de composant.
 On peut aussi passer d'un composant à l'autre par un bouton avec un lien de navigation. 
 A quoi sert le "RouterModule"?
 
