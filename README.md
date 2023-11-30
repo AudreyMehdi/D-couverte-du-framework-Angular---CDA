@@ -157,5 +157,6 @@ Pourquoi est ce que les import des nouveaux composants se font automatiquement d
 
 J'aime le coté d'utilisation de composant dans Angular. Ca permet de créer des pages dynamiques. J'attends de voir avec un projet où on part de zéro pour voir si ça facilite l'utilisation. Car hormis le côté composant je trouve que ça fait faire beaucoup d'imports.
 
-<img src="lhttps://images.app.goo.gl/SXnqf87Ej68siZD67" alt="Description_alternative">
 
+
+![Texte alternatif](lhttps://images.app.goo.gl/SXnqf87Ej68siZD67)
