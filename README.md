@@ -159,4 +159,4 @@ J'aime le coté d'utilisation de composant dans Angular. Ca permet de créer des
 
 
 
-![Texte alternatif](lhttps://images.app.goo.gl/SXnqf87Ej68siZD67)
+![Texte alternatif](./src/assets/confettis.gif)
