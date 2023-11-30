@@ -2,35 +2,6 @@
 
 
 
-------------INTRO-----------
-
-Le point d'entrée de l'application reste le fichier "index.html" (ce qui va être affiché à l'écran).
-Par défault quand on utilise Angular, dans le fichier index.html il y a la balise 
-```ts
-<app-root>"ici s'affichera toute la page Angular"</app-root>
-```
-Composant racine qui sera le parent de tous les composants.
-
-
-Un composant est définit par 3 fichiers.
-    
-     Composant.component.css
-     Composant.component.html // Définit la structure et la présentation du composant.
-     Composant.composant.ts
-   
-
-Pour créer un composant :
-Dans la console "ng generate component nomDuComposant".
-
-Le fichier app.module.ts est la structure centralisée pour définir les composants, modules et services.
-Dans ce fichier on déclare les composants dans la section "déclarations".
-On fait l'import des modules externes.
-
-### ///////J'ai pas bien compris à quoi sert le "RouterModule".
-
-
-
-
 ## ------------Partie 1.1-----------
 
 
@@ -128,20 +99,55 @@ routerLink="/cart" pour les liens de navigation. L'utilisateur click sur le lien
 
 Le dossier 'assets' dans un projet Angular est utilisé pour stocker des fichiers statiques, par exemple des images, des fichiers de style CSS, de configurations ou autre ressources.
 
-@Injectable est un décodeur TypeScript utilisé pour annoter une class, inquidant qu'elle peut être injectée avec les dépendances.
+
+
+# <<<<<<<<<<<PARTIE 4: Formulaire>>>>>>>>>>>
+
+
+Dans le tuto on va créer un formulaire dans le composant du panier pour que l'utilisateur rentre son nom, adresse et un bouton submit.
+
+Il faut d'abord faire l'import de FormBuilder dans le fichier ts du panier. 
+Ensuite il faut ajouter le service formBuilder en paramètre du contructeur du panier.
+FormBuilder.group() est la méthode pour définir la propriété sur un modèle de formulaire "nom", "adresse".
+Le méthode onSubmit() permet aux utilisateurs de soumettre leur nom et adresse.
+
+Pour créer un imput : 
+```ts
+<input id="name" type="text" formControlName="name">
+```
 
 
 
 
+# <<<<<<<<<<<Mes Observations>>>>>>>>>>>
+
+Le point d'entrée de l'application reste le fichier "index.html" (ce qui va être affiché à l'écran).
+Par défault quand on utilise Angular, dans le fichier index.html il y a la balise 
+```ts
+<app-root>"ici s'affichera toute la page Angular"</app-root>
+```
+Composant racine qui sera le parent de tous les composants.
+
+Un composant est définit par 3 fichiers.
+    
+    * Composant.component.css
+    * Composant.component.html // Définit la structure et la présentation du composant.
+    * Composant.composant.ts
+   
+
+Pour créer un composant :
+Dans la console "ng generate component nomDuComposant".
+
+Le fichier app.module.ts est la structure centralisée pour définir les composants, modules et services.
+Dans ce fichier on déclare les composants dans la section "déclarations".
+On fait l'import des modules externes.
+Un projet Angular est composé de plusieurs composants qui intéragissent entre eux.
+La méthode onInit me permet de changer de page et donc de composant.
+On peut aussi passer d'un composant à l'autre par un bouton avec un lien de navigation. 
+A quoi sert le "RouterModule"?
 
 
 
-
-
-Mes observations, la méthode o,i,it me permet de changer de page et donc de composant. dans le composant détail s'affiche le détails des téléphones. 
-On peut aussi passer d'un composant à lautre par un bouton avec un lien de navigation. 
 J'ai pas bien compris comment utiliser HttpClient, ça sert à faire des requête vers une API. Est ce que ça remplace la méthode fetch ?
 J'utilise un import HttpClient dans le service du panier, pourquoi est ce que je suis obligée de le mettre dans le fichier app.module.ts?
-
-
-Pourquoi est ce que les import des nouveaux composant se font automatiquement dans le fichier 'module.ts' mais il faut ajouter à la main les 'path'.
+Pourquoi est ce que les import des nouveaux composants se font automatiquement dans le fichier 'module.ts' mais il faut ajouter à la main les 'path'?
