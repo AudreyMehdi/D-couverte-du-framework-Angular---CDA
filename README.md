@@ -1,4 +1,4 @@
-# <<<<<<<<<<<PARTIE 1 :Initiation>>>>>>>>>>>
+# <<<<<<<<<<<PARTIE 1: Initiation>>>>>>>>>>>
 
 
 
@@ -91,7 +91,7 @@ La liaison de propriété me permet de transmettre la valeur de la propriété d
 
 
 
-# <<<<<<<<<<<PARTIE 2 :Routing>>>>>>>>>>>
+# <<<<<<<<<<<PARTIE 2: Routing>>>>>>>>>>>
 
 [routerLink]="['/products', product.id]" directive qui aide à personnaliser l'élément d'ancrage. Ca me permet de changer de page dans mon composant.
 
@@ -103,6 +103,45 @@ Lorsqu'une class implémente "OnInit", elle doit fournir une implémentation de 
 La méthode OnInit me permet de récupérer les productID, elle recherche le produit correspondant dans le tableau.
 
 ActivatedRoute à ajouter en argument du constructeur, il est spécifique à chaque composant chargé par Angular. On configure le composant pour utiliser un service.
+Dans Angular, un service est une instance d'une class qu'on peut mettre à disposition de n'importe qu'elle partie de l'appli à l'aide du système des dépendances.
 
-/// Si j'ai bien compris, le ActivedRoute sert à aller récupérer des données mais j'ai pas bien compris le fonctionnement.
+### //// Si j'ai bien compris, le ActivedRoute (dans le cas du tuto) sert à aller récupérer des données mais j'ai pas bien compris le fonctionnement.
 
+
+
+# <<<<<<<<<<<PARTIE 3: Data>>>>>>>>>>>
+
+-Création d'un service panier dans le tuto-
+
+Pour créer un service dans la console "ng generate servie nomDuService"
+
+Le décorateur @Injectable est utilisé pour indiquer qu'une class peut être injectée avec dépendances.
+Le paramètre 'providedIn: 'root' pour indiquer que le service sera injecté au niveau du module racine, ce qui le rend accessible partout dans l'application.
+
+```ts
+items: Product[] = [];
+```
+On déclare une propriété 'items' d'un tableau vide de type 'Product'. Ca va nous permettre de stoker les produits dans le panier.
+routerLink="/cart" pour les liens de navigation. L'utilisateur click sur le lien, ça entraine l'affichage d'un composant spécifique. (cart)
+
+| currency : directive intégrée Angular qui permet de formater les valeurs numériques. Souvent utilisée pour afficher des montants d'argent de manière plus lisible.
+
+Le dossier 'assets' dans un projet Angular est utilisé pour stocker des fichiers statiques, par exemple des images, des fichiers de style CSS, de configurations ou autre ressources.
+
+@Injectable est un décodeur TypeScript utilisé pour annoter une class, inquidant qu'elle peut être injectée avec les dépendances.
+
+
+
+
+
+
+
+
+
+Mes observations, la méthode o,i,it me permet de changer de page et donc de composant. dans le composant détail s'affiche le détails des téléphones. 
+On peut aussi passer d'un composant à lautre par un bouton avec un lien de navigation. 
+J'ai pas bien compris comment utiliser HttpClient, ça sert à faire des requête vers une API. Est ce que ça remplace la méthode fetch ?
+J'utilise un import HttpClient dans le service du panier, pourquoi est ce que je suis obligée de le mettre dans le fichier app.module.ts?
+
+
+Pourquoi est ce que les import des nouveaux composant se font automatiquement dans le fichier 'module.ts' mais il faut ajouter à la main les 'path'.
