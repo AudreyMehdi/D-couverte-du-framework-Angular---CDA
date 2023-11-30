@@ -160,3 +160,4 @@ J'aime le coté d'utilisation de composant dans Angular. Ca permet de créer des
 
 
 ![Texte alternatif](./src/assets/confettis.gif)
+# Fin
