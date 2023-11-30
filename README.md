@@ -152,3 +152,10 @@ A quoi sert le "RouterModule"?
 J'ai pas bien compris comment utiliser HttpClient, ça sert à faire des requête vers une API. Est ce que ça remplace la méthode fetch ?
 J'utilise un import HttpClient dans le service du panier, pourquoi est ce que je suis obligée de le mettre dans le fichier app.module.ts?
 Pourquoi est ce que les import des nouveaux composants se font automatiquement dans le fichier 'module.ts' mais il faut ajouter à la main les 'path'?
+
+# Mon ressenti
+
+J'aime le coté d'utilisation de composant dans Angular. Ca permet de créer des pages dynamiques. J'attends de voir avec un projet où on part de zéro pour voir si ça facilite l'utilisation. Car hormis le côté composant je trouve que ça fait faire beaucoup d'imports.
+
+<img src="lhttps://images.app.goo.gl/SXnqf87Ej68siZD67" alt="Description_alternative">
+
