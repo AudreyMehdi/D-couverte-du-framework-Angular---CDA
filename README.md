@@ -120,7 +120,7 @@ Pour créer un imput :
 
 
 
-# <<<<<<<<<<<Mes observations>>>>>>>>>>>
+# Mes observations
 
 Le point d'entrée de l'application reste le fichier "index.html" (ce qui va être affiché à l'écran).
 Par défault quand on utilise Angular, dans le fichier index.html il y a la balise 
