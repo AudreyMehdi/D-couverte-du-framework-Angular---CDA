@@ -5,7 +5,10 @@
 ------------INTRO-----------
 
 Le point d'entrée de l'application reste le fichier "index.html" (ce qui va être affiché à l'écran).
-Par défault quand on utilise Angular, dans le fichier index.html il y a la balise ```<app-root>"ici s'affichera toute la page Angular"</app-root>``
+Par défault quand on utilise Angular, dans le fichier index.html il y a la balise 
+```ts
+<app-root>"ici s'affichera toute la page Angular"</app-root>
+```
 Composant racine qui sera le parent de tous les composants.
 
 
@@ -32,9 +35,9 @@ On fait l'import des modules externes.
 
 
 . Dans l'exemple, il y a 3 composants :
-     - app.component
-     - app.top-bar.component (enfant de app.component)
-     - app.product-list.component (enfant de app.component)
+     * app.component
+     * app.top-bar.component (enfant de app.component)
+     * app.product-list.component (enfant de app.component)
 
 . Un fichier product.ts qui contient la liste des produits avec le détail. (pour simuler les données API)
 
@@ -85,4 +88,21 @@ me permet de créer une instance du composant dans le template du composant pare
 La liaison de propriété me permet de transmettre la valeur de la propriété du composant parent au composant enfant.
 
 (notify)="onNotify()" : Liaison d'évènement pour écouter un évènement émis par un composant parent.
+
+
+
+# <<<<<<<<<<<PARTIE 2 :Routing>>>>>>>>>>>
+
+[routerLink]="['/products', product.id]" directive qui aide à personnaliser l'élément d'ancrage. Ca me permet de changer de page dans mon composant.
+
+
+Les composants ont des cycles de vie. Le cycle de vie comprend plusieurs méthodes qui sont appelées à des moments spécifiques de ce cycle.
+
+ngOnInit() : cette méthode est appelée après que le composant ait été inisialisé. C'est généralement l'endroit où on effectue les tâches d'inisialisation tel que la récupération de données. 
+Lorsqu'une class implémente "OnInit", elle doit fournir une implémentation de la méthode. Cela signifie que la class est informée lorqu'elle est créée et peut effectuer des tâches d'initialisations.
+La méthode OnInit me permet de récupérer les productID, elle recherche le produit correspondant dans le tableau.
+
+ActivatedRoute à ajouter en argument du constructeur, il est spécifique à chaque composant chargé par Angular. On configure le composant pour utiliser un service.
+
+/// Si j'ai bien compris, le ActivedRoute sert à aller récupérer des données mais j'ai pas bien compris le fonctionnement.
 
